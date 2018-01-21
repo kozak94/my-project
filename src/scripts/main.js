@@ -32,7 +32,7 @@
             }
 
 
-          $('#MaxTemp').text(MaxTemperatureC); // виводимо в Ферингейтах температуру.
+          $('#MaxTemp').text(MaxTemperatureC); // виводимо в Цельсіях температуру.
 
      
 
