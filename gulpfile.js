@@ -9,7 +9,6 @@ const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const rigger = require('gulp-rigger');
-const bootstrap = require('bootstrap');
 
 // Создаем таск для сборки html файлов
 gulp.task('html', () => {
@@ -23,7 +22,7 @@ gulp.task('html', () => {
     }))
     // выкидываем html в папку dist
     .pipe(gulp.dest('./dist'))
-    // говорим browser-sync о том что пора перезагрузить браузер, так как файл изменился
+    // говорим browser-sync о том что пора перезагрузить барузер, так как файл изменился
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -48,7 +47,7 @@ gulp.task('css', () => {
     .pipe(cssnano())
     // Выкидываем css в папку dist
     .pipe(gulp.dest('./dist'))
-    // Говорим browser-sync о том что пора перезагрузить браузер так как файл изменился
+    // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -68,7 +67,7 @@ gulp.task('img', () => {
       })))
     // Выкидываем в папку dist/img
     .pipe(gulp.dest('./dist/images'))
-    // Говорим browser-sync о том что пора перезагрузить браузер так как файл изменился
+    // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -78,16 +77,15 @@ gulp.task('img', () => {
 gulp.task('fonts', () => {
   return gulp.src('./src/fonts/**/*.*')
     .pipe(gulp.dest('./dist/fonts'))
-    // Говорим browser-sync о том что пора перезагрузить браузер так как файл изменился
+    // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
     .pipe(browserSync.reload({
       stream: true
     }));
 });
-// Таск копирования всех scripts из папки scripts в dist/scripts
-gulp.task('scripts', () => {
-  return gulp.src('./src/scripts/**/*.js')
+gulp.task('script', () => {
+  return gulp.src('./src/scripts/**/*.*')
     .pipe(gulp.dest('./dist/scripts'))
-    // Говорим browser-sync о том что пора перезагрузить браузер так как файл изменился
+    // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -103,8 +101,7 @@ gulp.task('watch', () => {
   gulp.watch('./src/images/**/*.*', ['img']);
   // Следим за изменениями в шрифтах и вызываем таск 'fonts' на каждом изменении
   gulp.watch('./src/fonts/**/*.*', ['fonts']);
-  // Следим за изменениями в scripts и вызываем таск 'scripts' на каждом изменении
-  gulp.watch('./src/scripts/**/*.js', ['scripts']);
+  gulp.watch('./src/scripts/**/*.*', ['script']);
 });
 
 // Таск создания и запуска веб-сервера
@@ -125,7 +122,7 @@ gulp.task('del:dist', () => {
 });
 
 // Таск который 1 раз собирает все статические файлы
-gulp.task('build', ['html', 'css', 'img', 'fonts']);
+gulp.task('build', ['html', 'css', 'img', 'fonts','script']);
 
 // Главный таск, сначала удаляет папку dist,
 // потом собирает статику, после чего поднимает сервер

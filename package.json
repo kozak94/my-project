@@ -15,7 +15,6 @@
     "bugs": {
         "url": "https://github.com/kozak94/gulp_starter/issues"
     },
-    
     "devDependencies": {
         "browser-sync": "^2.18.13",
         "del": "^3.0.0",
