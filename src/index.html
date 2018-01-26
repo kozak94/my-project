@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pet project</title>
-    <link rel="stylesheet" href="sass/main.scss">
+    <link rel="stylesheet" href="../dist/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
         crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="scripts/main.js" type='text/javascript'></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+   
+
+
+
 
 
 </head>
@@ -21,44 +22,54 @@
 
     <div class="container">
         <div class="row input">
-            <div class="col-sm-12 col-lg-12 mx-auto">
+            <div class="col-12 mx-auto">
                 <div class="p-5 centr">
-                    <span>Введить місто (Kiev,London,Los-Angeles)</span>
+                    <span>Введить місто </span>
                     <input type="text" name="" id="City">
                     <button>get content</button>
                 </div>
 
             </div>
-
+            <div class="col-12 p-5 centr">
+                
+                    <h2>Виберіть місто на карті</h2>
+                    <div id="map"></div>
+                
+            </div>
         </div>
         <div class="row basic info content">
-            <div class="col-sm-12 col-lg-4 temp">
 
-                <div class="col-sm-12 col-lg-4">
-                    <p>Mаксимальна температура :</p><p id="MaxTemp"></p>
-                </div>
-                <div class="col-sm-12 col-lg-4"> 
-                    <p>Мінімальна температура</p><p id="MinTemp"></p>
-                </div>
+            <div class="col allinfo">
+                <section>
 
-            </div>
-            <div class="col-sm-12 col-lg-4 windS">
-
-                <div class="col">
-                    <p>Вибране місто</p>
-                </div>
-
-            </div>
-            <div class="col-sm-12 col-lg-4 atmos">
-                
+                    <div class="col-sm-12 col-lg-4">
+                        <p>Mаксимальна температура :</p>
+                        <p id="MaxTemp"></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <p>Мінімальна температура :</p>
+                        <p id="MinTemp"></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <p>Температура зараз :</p>
+                        <p id="NowTemp"></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <p>Вибране місто</p>
+                        <p id="City"></p>
+                    </div>
                     <div class="col-sm-12 col-lg-4">
                         <p>Атмосферний тиск</p>
+                        <p id="Pressure"></p>
                     </div>
                     <div class="col-sm-12 col-lg-4">
-                        <p>Швидкість вітру</p><p id="WindSpeed"></p>
+                        <p>Швидкість вітру</p>
+                        <p id="WindSpeed"></p>
                     </div>
-                
+                </section>
             </div>
+
+
             <div class="col-sm-12">
                 <div class="slaider"></div>
                 <input type="button" value="Підписка на погоду">
@@ -67,7 +78,16 @@
     </div>
 
 
-    <script></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVdtwUAOqbtpbKDAB0OA-9iCkAAcsZJCc&callback=initMap"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="scripts/main.js" type='text/javascript'></script>
+<script src="scripts/map.js"></script>
+
 </body>
 
 </html>
