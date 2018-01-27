@@ -88,5 +88,10 @@ $(document).ready(function () {
     $('#ShowMap').click(function () {
         $('.map').toggleClass("show");
     });
+    $('#Subs').click(function () {
+        $('#SubForm').load('regform.html');
+        
+    })
     $('.slick-slider').slick();
+    
 });

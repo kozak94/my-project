@@ -32,7 +32,7 @@ body {
 
         
     }
-    .input{
+    .search{
         color: #30455b;
         width: 50%;
     }
@@ -65,11 +65,11 @@ body {
 }
 .slick-slider{
     padding: 10px;
-    h3{
+    .NowTemp,.MaxTemp,.MinTemp,.WindSpeed,.Pressure,.City{
         height: 110px;
         margin: 0px auto;
         text-align: center;
-        font-size: 36px;
+        font-size: 24px;
         color: steelblue;
         background-color: #bbb;
     }
@@ -79,7 +79,7 @@ body {
     color: white;
     text-align: center;
     padding: 15px 50px;
-    input{
+    #Subs{
         color:#30455b;
         padding: 15px;
         font-weight: bold;
@@ -105,4 +105,27 @@ background-color:#bbb;
         text-decoration: none;
 
     }
+}
+section#form-set {
+    width: 70%;
+    margin: 50px auto;
+    padding: 15px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+.form-control {
+
+    padding: 10px;
+}
+
+#price {
+    padding: 0 5px;
+}
+
+.error {
+    background-color: Pink;
+}
+
+.right {
+    background-color: LightGreen;
 }
