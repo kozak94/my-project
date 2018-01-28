@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#button").click(function () {
         var CityInput = $('#City').val();
         console.log(CityInput);
-        var url = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=AVxnqMfPACom2FnCptPjufAcGCiKMLkx&q="
+        var url = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=AVxnqMfPACom2FnCptPjufAcGCiKMLkx&q="
         var APIurl = url + CityInput;
         console.log(APIurl);
         // var CityKey = 0;
@@ -27,7 +27,7 @@ $(document).ready(function () {
         console.log(CityKey);
         console.log(CityName); $('#City').text(CityName);
         var apiAdress =
-            'http://dataservice.accuweather.com/currentconditions/v1/' + CityKey + '?apikey=AVxnqMfPACom2FnCptPjufAcGCiKMLkx&details=true';
+            'https://dataservice.accuweather.com/currentconditions/v1/' + CityKey + '?apikey=AVxnqMfPACom2FnCptPjufAcGCiKMLkx&details=true';
         console.log(apiAdress);
 
         // даємо запит до АРІ по отриманій локації і виводимо значення макс і мін температури тиск і шв.вітру
