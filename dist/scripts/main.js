@@ -111,7 +111,7 @@ $(document).ready(function () {
       var lat = marker.getPosition().lat();
       var lng = marker.getPosition().lng();
       console.log(lat + ',' + lng); //выводим в консоль браузера нові координаты
-      var urlapi = "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=AVxnqMfPACom2FnCptPjufAcGCiKMLkx&q=" + lat + "%2C" + lng + '&toplevel=true';
+      var urlapi = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=AVxnqMfPACom2FnCptPjufAcGCiKMLkx&q=" + lat + "%2C" + lng + '&toplevel=true';
       console.log(urlapi);
       $.ajax({
         async: false,
