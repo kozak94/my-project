@@ -122,6 +122,11 @@ $(document).ready(function () {
           console.log(data);
           CityKey = data.Key;
           console.log(CityKey);
+          СityName = data.EnglishName;
+
+          
+          
+
         }
       });
       var apiAdress =
@@ -170,9 +175,13 @@ $(document).ready(function () {
 
 
   });
+  
   $('#Subs').click(function () {
-    $('#SubForm').load('regform.html');
-
+    $('#SubForm').toggleClass("show");
+  })
+  $('#submit').click(function () {
+    $("#myModal").modal();
+    
   })
   $('.slick-slider').slick();
 

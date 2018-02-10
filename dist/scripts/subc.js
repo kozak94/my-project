@@ -8,16 +8,10 @@ function init() {
     SingUp.inputNumber.onchange = NumberOnChange;
     SingUp.inputEmail.onchange = emailOnChange;
     SingUp.onchange = formOnChange;
-    // size.addEventListener("change", priceOfSize(), false);
-    // submit.addEventListener("click", AJAX, false);
-    submit.disabled = "true";
+      submit.disabled = "true";
 }
 
-// function priceOfSize() {
-//     var a = document.getElementById("price");
-//     var b = document.getElementById("size").value;
-//     a.innerHTML = b;
-// }
+
 
 function validate(elem, pattern) {
     var res = elem.value.search(pattern);
@@ -34,7 +28,7 @@ function nameOnChange() {
 }
 
 function NumberOnChange() {
-    var pattern = / \+380\d{3}\d{2}\d{2}\d{2}$/;
+    var pattern = /\+380\d{3}\d{2}\d{2}\d{2}/;
     validate(this, pattern);
 }
 
@@ -57,6 +51,6 @@ function formOnChange() {
 
     }
 
-    alert('hello world')
+
 }
 
