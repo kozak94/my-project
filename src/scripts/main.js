@@ -175,9 +175,13 @@ $(document).ready(function () {
 
 
   });
+  
   $('#Subs').click(function () {
-    $('#SubForm').load('regform.html');
-
+    $('#SubForm').toggleClass("show");
+  })
+  $('#submit').click(function () {
+    $("#myModal").modal();
+    
   })
   $('.slick-slider').slick();
 

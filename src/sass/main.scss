@@ -2,11 +2,9 @@
    Import partials below
 */
 @import 'reset.scss';
-@import 'bootstrap.min.css';
+// @import 'bootstrap.min.css';
 body {
-    
-    font-family: 'Pathway Gothic One',sans-serif;
-
+     font-family: 'Pathway Gothic One',sans-serif;
 }
 .firth_block{
     background-color:#30455b;
@@ -134,5 +132,7 @@ section#form-set {
     padding: 15px;
     font-weight: 700;
     text-transform: uppercase;
-
+}
+#SubForm{
+    display: none;
 }
